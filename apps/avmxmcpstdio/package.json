@@ -1,0 +1,21 @@
+{
+  "name": "avmxmcpstdio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "inspector": "npx @modelcontextprotocol/inspector node index.js",
+    "langchain": "node langchain.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@langchain/langgraph": "^0.3.4",
+    "@langchain/mcp-adapters": "^0.5.2",
+    "@langchain/openai": "^0.5.15",
+    "@modelcontextprotocol/sdk": "^1.13.0",
+    "zod": "^3.25.67"
+  }
+}
