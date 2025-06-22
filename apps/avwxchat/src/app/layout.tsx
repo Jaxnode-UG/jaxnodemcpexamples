@@ -4,6 +4,7 @@ import { ActiveLink } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Toaster } from "@/components/ui/sonner";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
+import Image from "next/image";
 
 const publicSans = Public_Sans({ subsets: ["latin"] });
 
@@ -27,7 +28,7 @@ const Logo = () => (
          style={{fill:"#373535", fillOpacity:1, fillRule:"evenodd", stroke:"none"}}
          d="m 0,0 207.031,0 0,65.741 L 0,65.741 -8.75,35 0,0 Z" /></g><g
        id="g16"><g
-         clip-path="url(#clipPath20)"
+         clipPath="url(#clipPath20)"
          id="g18"><g
            transform="translate(94.875,590.9911)"
            id="g24"><path
@@ -79,7 +80,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>LangChain + Next.js Template</title>
+        <title>JaxNode Chat</title>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <meta
           name="description"
@@ -110,7 +111,12 @@ export default function RootLayout({
                   target="_blank"
                   className="flex items-center gap-2"
                 >
-                  {/* <Logo /> */}
+                  <Logo />
+                  <Image 
+                    src="/images/SVG/jaxnode.svg" 
+                    alt="JaxNode Logo" 
+                    className="h-8"
+                    width={140} height={30} />
                 </a>
                 <nav className="flex gap-1 flex-col md:flex-row">
                   <ActiveLink href="/">🏴‍☠️ Chat</ActiveLink>
@@ -133,7 +139,7 @@ export default function RootLayout({
               <div className="flex justify-center">
                 <Button asChild variant="outline" size="default">
                   <a
-                    href="https://github.com/langchain-ai/langchain-nextjs-template"
+                    href="https://github.com/Jaxnode-UG/jaxnodemcpexamples"
                     target="_blank"
                   >
                    
