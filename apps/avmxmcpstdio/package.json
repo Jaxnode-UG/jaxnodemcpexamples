@@ -16,6 +16,7 @@
     "@langchain/mcp-adapters": "^0.5.2",
     "@langchain/openai": "^0.5.15",
     "@modelcontextprotocol/sdk": "^1.13.0",
+    "dotenv": "^16.5.0",
     "zod": "^3.25.67"
   }
 }
