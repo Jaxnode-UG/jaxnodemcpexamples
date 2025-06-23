@@ -6,7 +6,7 @@ export default function Home() {
     <GuideInfoBox>
       <ul>
         <li className="text-l">
-          🤝 AVWX Chat
+          🤝 General Chat
          
         </li>
       </ul>
