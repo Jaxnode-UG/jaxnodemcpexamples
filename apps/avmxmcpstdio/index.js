@@ -42,6 +42,22 @@ server.tool("get_aviation_weather_forecast",
   }
 );
 
+server.tool("get_forecast_discussion",
+  "A tool to get the forecast discussion for a specific CMO location",
+  { location: z.string().length(3).describe("The CMO code for an area, i.e. JAX, MIA") },
+  async ({ location }) => {
+    // Simulate a weather API call
+    const weatherApiResponse = await fetch(`https://avwx.fekke.com/forecastdiscussion/${location}`);
+    const weatherData = await weatherApiResponse.text();
+    return {
+      content: [{
+        type: "text",
+        text: weatherData
+      }]
+    };
+  }
+);
+
 // Add a dynamic greeting resource
 server.resource(
   "greeting",

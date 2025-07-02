@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Message as VercelChatMessage } from "ai";
 
 import { createReactAgent } from "@langchain/langgraph/prebuilt";
-import { ChatOpenAI } from "@langchain/openai";
+import { ChatOllama } from "@langchain/ollama";
 import {
   AIMessage,
   BaseMessage,
@@ -82,8 +82,9 @@ export async function POST(req: NextRequest) {
       additionalToolNamePrefix: "",
     });
 
-    const chat = new ChatOpenAI({
-      model: "gpt-4.1",
+    const chat = new ChatOllama({
+      baseUrl: "http://127.0.0.1:11434", // Use IPv4 explicitly
+      model: "llama3.2:latest", // Use the actual model you have installed
       temperature: 0,
     });
 
